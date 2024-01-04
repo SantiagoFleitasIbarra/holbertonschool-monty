@@ -37,7 +37,7 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-int _nop(stack_t **stack, unsigned int line_number);
+void _nop(stack_t **stack, unsigned int line_number);
 int _pall(stack_t **stack, unsigned int line_number);
 int _push(stack_t **stack, unsigned int line_number);
 int _isdigit(int c);
