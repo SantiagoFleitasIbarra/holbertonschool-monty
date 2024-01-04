@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
- * _isdigit - checks if a string is all digits
- * @c: int to check
- * Return: 0 if it find something that it isn't a digit, 1 otherwise
-*/
+ * _isdigit - check if a character is a digit
+ * @c: character to check
+ * Return: 1 if it is a digit, 0 otherwise
+ */
 int _isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
