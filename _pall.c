@@ -11,7 +11,6 @@ int _pall(stack_t **stack, unsigned int line_number)
     stack_t *element = *stack;
 
     (void)line_number;
-
     if (!element)
         return (0);
     while (element)
@@ -20,7 +19,6 @@ int _pall(stack_t **stack, unsigned int line_number)
             printf("%u\n", element->n);
         else
             printf("%u\n", 0);
-
         element = element->next;
     }
     return (0);
