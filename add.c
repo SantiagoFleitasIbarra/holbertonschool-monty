@@ -1,22 +1,16 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "monty.h"
 
-#define SIZE_STACK 500
-
-
-void add(int line_number)
+void add(stack_t **stack, unsigned int line_number)
 {
-
-int stack[SIZE_STACK];
-int top = -1;
-
-	if (top < 1)
+	if (*stack == NULL || (*stack)->next == NULL)
 	{
-        printf("Error at line %d: can't add, stack too short.\n", line_number);
-        exit(EXIT_FAILURE);
+	fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
+	exit(EXIT_FAILURE);
 	}
 
-    stack[top - 1] += stack[top];
-
-    --top;
+	(*stack)->next->n += (*stack)->n;
+	*stack = (*stack)->next;
+	free((*stack)->prev);
+	(*stack)->prev = NULL;
 }
+

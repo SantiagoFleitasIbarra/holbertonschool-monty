@@ -1,19 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "monty.h"
 
-#define SIZE_STACK 500
-
-
-void pop(int line_num)
+void pop(stack_t **stack, unsigned int line_number)
 {
-int stack[SIZE_STACK];
-int top = -1;
+	if (*stack == NULL)
+	{
+	fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
+	exit(EXIT_FAILURE);
+	}
 
-    if (top == -1)
-{
-        printf("Error at line %d: can't pop an empty stack.\n", line_num);
-        exit(EXIT_FAILURE);
-    }
-
-    --top;
+	stack_t *temp = *stack;
+	*stack = (*stack)->next;
+	free(temp);
 }
+
