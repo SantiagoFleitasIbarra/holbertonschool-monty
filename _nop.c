@@ -8,8 +8,4 @@
 void _nop(stack_t **stack)
 {
 	(void)stack;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 78c18be543bd1393a429abedb594152d552e6412
