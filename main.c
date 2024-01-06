@@ -45,6 +45,6 @@ int main(int argc, char *argv[])
             exit(EXIT_FAILURE);
         }
     }
-    fclose(file);
+    fclose(file), free_stack(stack), free_line(line);
     return (0);
 }
