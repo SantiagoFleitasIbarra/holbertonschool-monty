@@ -8,5 +8,5 @@
 
 void _nop(stack_t **stack)
 {
-    (void)stack;
+	(void)stack;
 }

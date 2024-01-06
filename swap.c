@@ -1,18 +1,19 @@
 #include "monty.h"
 
 /**
-swap - the function to swap in the stack
-@stack: the stack
-@line_number: the curretn line number
+* swap - the function to add to the stack
+ * @stack: pointer to the stack where the element will be added
+ * @line_number: the current line number in the script
+ *
+ * Return: swap the elements in the stack
+ */
 
 
-Return: a swap
-*/
 
 void swap(stack_t **stack, unsigned int line_number)
 {
 
-int temp; 
+int temp;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{

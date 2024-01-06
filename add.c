@@ -1,12 +1,14 @@
 #include "monty.h"
 
-/**
-add - the function to add to the stack
-@stack: the stack that is going to be used
-@line_number. the current line number
 
-Return: adding another element to the stack
-*/
+/**
+* add - the function to add to the stack
+ * @stack: pointer to the stack where the element will be added
+ * @line_number: the current line number in the script
+ *
+ * Return: void (or describe what is returned)
+ */
+
 
 void add(stack_t **stack, unsigned int line_number)
 {
