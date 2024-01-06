@@ -5,7 +5,7 @@
  * @stack: pointer to a stack node pointer
  * @line_number: variable representing the current line number
  * Return: 0 if success
-*/
+ */
 int _pall(stack_t **stack, unsigned int line_number)
 {
     stack_t *element = *stack;

@@ -5,7 +5,7 @@
  * @argc: number of arguments
  * @argv: the arguments
  * Return: 0 if success
-*/
+ */
 
 int main(int argc, char *argv[])
 {
@@ -37,13 +37,14 @@ int main(int argc, char *argv[])
             _pall(&stack, line_number);
         else if (strcmp(opcode, "nop") == 0)
             _nop(&stack);
+        else if (strcmp(opcode, "pint") == 0)
+            _pint(&stack, line_number);
         else
         {
             fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
             exit(EXIT_FAILURE);
         }
     }
-
     fclose(file);
-    return(0);
+    return (0);
 }

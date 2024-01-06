@@ -1,10 +1,9 @@
 #ifndef MONTY_H
 #define MONTY_H
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
+# include <stdlib.h>
+# include <stdio.h>
+# include <string.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -40,10 +39,10 @@ void _nop(stack_t **stack);
 int _pall(stack_t **stack, unsigned int line_number);
 int _push(stack_t **stack, unsigned int line_number);
 int _isdigit(int c);
+void _pint(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
 
 
-#endif 
-
+#endif
